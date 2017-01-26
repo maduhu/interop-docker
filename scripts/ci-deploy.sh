@@ -7,7 +7,7 @@ pushDocker() {
   local REPO=$(basename $PWD)
   docker build -t $REGISTRY$REPO --rm=false .
   docker login -u $JFROG_USERNAME -p $JFROG_PASSWORD -e $JFROG_EMAIL $REGISTRY
-  docker tag $REGISTRY$REPO":latest" $REGISTRY$REPO":$(git describe)"
+  docker tag -f $REGISTRY$REPO":latest" $REGISTRY$REPO":$(git describe)"
   docker push $REGISTRY$REPO":latest"
   docker push $REGISTRY$REPO":$(git describe)"
 }
