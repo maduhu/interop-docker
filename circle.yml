@@ -1,0 +1,14 @@
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - echo "This project test section has been overriden on the circle.yml file"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      # Deployment tasks
+      - scripts/ci-deploy.sh
