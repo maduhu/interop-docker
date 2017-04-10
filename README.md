@@ -40,4 +40,4 @@ Docker logs.
 
 ## Tests
 
-There are no tests for project.
+There are no tests for this project.
