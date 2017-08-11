@@ -19,7 +19,7 @@ flags are in the dockerfile for changing java and mule versions
 
 For running a dev container: 
 
-docker run -d -v /opt/mule/logs:/opt/mule/logs -p 8081:8081 -p 8088:8088 -p 9081:9081 -p 9082:9082 --name devMule -e MULE_ENV=dev modusbox/mule38java8
+docker run -d -v /opt/mule/logs:/opt/mule/logs -v /opt/mule/apps:/opt/mule/apps -v /opt/mule/domains:/opt/mule/domains -v /opt/mule/conf:/opt/mule/conf -p 8081:8081 -p 8088:8088 -p 9081:9081 -p 9082:9082 --name devMule -e MULE_ENV=dev modusbox/mule38java8
 
 ## Configuration
 
